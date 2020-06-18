@@ -1,0 +1,171 @@
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#user_data_filter input{
+  width: 500px;
+}
+.sector {
+  font-size: 1vw;
+    white-space: nowrap;
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,0,0,1); /* Black background with opacity */
+  z-index: 20000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  
+
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: red;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 30px;
+  right: 10%;
+  font-size: 20px;
+}
+#alertoverlay{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+/**/
+.icon {
+        font-size: 1.2em;
+        padding: 0px 5px 5px 5px;
+        height: 1.0em;
+        width: 0.8em;
+        color: #1E90FF;
+        /*background-color: #0040ff;*/
+        position: relative;
+        text-align: center;
+    }
+.icon-wite {
+        font-size: 1.2em;
+        padding: 0px 5px 5px 5px;
+        height: 1.0em;
+        width: 0.8em;
+        color:  #A9A9A9;
+        /*background-color: #0040ff;*/
+        position: relative;
+        text-align: center;
+    }       
+    .preclass{
+    padding: 5px;
+    padding-right: 0px;
+  }
+  pre, footer {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+.tooltip{
+  font-size: 1.5rem;
+}
+.tooltip.show {
+  opacity: 1;
+}
+.tooltip-inner {
+  min-width: 500px;
+  color: #000;
+  background-color: #ffffff;
+}
+.images-tabl a {
+      display: block;
+    }
+
+.images-tabl a img {
+      display: none;
+      position: absolute;
+      top: 0;
+      border: 3;
+      border-color: black;
+      border-style: solid;
+      left: 10%;
+      top: 10%;
+      z-index: 99999;
+    }
+
+.images-tabl a:hover img {
+      display: block;
+    }
+
+
+
+
+    #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 300px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
