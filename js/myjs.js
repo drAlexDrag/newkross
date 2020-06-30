@@ -8,6 +8,7 @@ $(document).ready(function(){
   });
 var myWindow;
 function dump() {
+  console.log("Start Dump");
  $.ajax({
   url: "/dump/dump.php",
   cache: false,
@@ -38,7 +39,7 @@ function tablnumber(number) {
   window.open('./table/table.php');
 }
 function catalogOpen()
-{ 
+{
   window.open("/catalog/catalog.php");
 }
 
@@ -337,7 +338,7 @@ $(document).on('click', '.autoListData', function(){
   autoListData(tablename, idinput, query, columnname, iddatatable, input);
 });
 $(document).on('keyup', '.autoListData', function(){//потом переделать
-  
+
   var idinput=event.target.id;
   input=event.target.id;
   var tablename = event.target.dataset.table;
@@ -481,13 +482,13 @@ $(document).on('keyup', '#data', function(){
  var idinput="#"+$(this).attr('id');
  var serachString=$(this).val();
  objArea=paramArea();
- 
+
  if($(this).val().length>=3)
  {
 if(!isCyrillic($(this).val())){
     alertoverlay("Переключите язык ввода на Английский");
   }
-  
+
   // $("#closeAlertoverlay").show();
   var action="data_autosearch";
 $.ajax({
@@ -696,9 +697,9 @@ function confirmCopy(pereKrossOut) {
       off();
       $('#content').html(data);
       $('#myModalCRUD').modal('hide');
-     
+
     }
-  }); 
+  });
   // alert(pereKrossOut);
 }
 //////////////////////Edit Catalog//////////////////////////////////////////////////
@@ -715,9 +716,9 @@ function confirmCopy(pereKrossOut) {
 //       // off();
 //       $('#content').html(data);
 //       $('#search').html('<hr>');
-     
+
 //     }
-//   }); 
+//   });
 // }
 // function unitCatalog(id) {
 //   // var unit_id = id;
@@ -756,14 +757,14 @@ function confirmCopy(pereKrossOut) {
 //             });
 //            // alert(selectedRow);
 //            // console.log($('.row_drag>tr').length);
-           
+
 
 //         }
 //     });
 // }
-    
+
 //     function authorityStart() {
-          
+
 //       authorityRemove();
 // texts = document.querySelectorAll(".row_drag>tr");
 //            suball = texts.length;
@@ -777,12 +778,12 @@ function confirmCopy(pereKrossOut) {
 //         $(arrtext[co]).append('<td class="rem">'+co+'</td>');
 //         console.log(arrtext[co]);
 //     }
-//   var i = 0;  
-//  $('.row_drag>tr').each(function() { 
+//   var i = 0;
+//  $('.row_drag>tr').each(function() {
 // $(this).attr("data-authority", i);
 // console.log(i);
 // i++;
-//             }); 
+//             });
 
 // }
 //     function authorityRemove() {
@@ -796,15 +797,15 @@ function confirmCopy(pereKrossOut) {
 //         $(arrtext[co]).remove();
 //     }
 // }
-// function authorityConfirm() { 
+// function authorityConfirm() {
 //   var unit_id = $("#unit").attr("data-unit-id");
-//     $('.row_drag>tr').each(function() { 
+//     $('.row_drag>tr').each(function() {
 //       // var aut=$(this).data.authority="asde";
 //       var newaut = {
 //     id: $(this).attr("id"),
 //     authority: $(this).attr("data-authority")
 //   }
- 
+
 //   var newaut = JSON.stringify(newaut);
 //   // $('#content').html('');
 //   $.ajax({
@@ -820,7 +821,7 @@ function confirmCopy(pereKrossOut) {
 //       }
 //     });
 
-//             });  
+//             });
 //     unitCatalog(unit_id);
 // }
 ////////////////////////////////////////////////////////////////////////////////////

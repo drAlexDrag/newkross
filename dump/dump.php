@@ -3,7 +3,7 @@
 date_default_timezone_set('Europe/Minsk');
 $out="";
 $dump_dir_if = "D:/DUMP/NKROSS/";
-$dump_dir_if_remote = "//ue-asue2.transistor.com.by/d/NKROSS/";
+$dump_dir_if_remote = "//uge-asue1.transistor.com.by/NKROSS/";
 $file = "nkross_".date("Ymd_Hi"); // Имя архива
 $delay_delete = 180 * 24 * 3600; // Время в секундах, через которое архивы будут удаляться
   if (file_exists($dump_dir_if)) {
@@ -14,19 +14,19 @@ $delay_delete = 180 * 24 * 3600; // Время в секундах, через �
    $dump_dir = "D:/DUMP/NKROSS/";
 }
 ///////////////////////////////////remote//////////////////////
-exec("ping -n 2 ue-asue2.transistor.com.by", $output, $status);
+exec("ping -n 2 uge-asue1.transistor.com.by", $output, $status);
 if($status==0){
 	if (file_exists($dump_dir_if_remote)) {
    // echo "Существует";
-  	$dump_dir = "//ue-asue2.transistor.com.by/d/NKROSS/";
+  	$dump_dir = "//uge-asue1.transistor.com.by/NKROSS/";
 } else {
 
 	mkdir($dump_dir_if_remote, 0700, true);
-	$dump_dir = "//ue-asue2.transistor.com.by/d/NKROSS/";
+	$dump_dir = "//uge-asue1.transistor.com.by/NKROSS/";
 }
-exec("mysqldump --user=dron --password=port2100 --host=localhost newkross > //ue-asue2.transistor.com.by/d/NKROSS/".$file.".sql", $output, $return);
+exec("mysqldump --user=dron --password=port2100 --host=localhost newkross > //uge-asue1.transistor.com.by/NKROSS/".$file.".sql", $output, $return);
 if(!$return)
-{$out.= ('<div class="container-fluid alert alert-success">Создана копия на удаленной машине: //ue-asue2.transistor.com.by/d/NKROSS/'.$file.'.sql</div>');}
+{$out.= ('<div class="container-fluid alert alert-success">Создана копия на удаленной машине: //uge-asue1.transistor.com.by/NKROSS/'.$file.'.sql</div>');}
 else { echo '<div class="container-fluid alert alert-danger">Ошибка копирования на удаленную машину</div>';}
 
 } else {
