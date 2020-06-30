@@ -48,7 +48,7 @@ if(isset($_SESSION['loginUser'])):?>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownDB">
             <a class="dropdown-item" href="./table/table.php" target="_blank">Таблицы</a>
 
-            
+
             <hr>
             <a class="dropdown-item" href="#" onclick="openWin()">Таблица кабелей</a>
             <hr>
@@ -77,7 +77,7 @@ if(isset($_SESSION['loginUser'])):?>
 
           </div>
         </li>
-        
+
 
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="exitKross()">Выход</a>
@@ -109,7 +109,7 @@ if(isset($_SESSION['loginUser'])):?>
         Дзержинка Кросс 5811<br/><br/>
       </div>
           <div class="col-md-4"><h3>Просмотры справочника</h3><hr>
-           <!-- <?php include 'show_stats.php';?> -->
+           <?php include 'show_stats.php';?>
          </div>
          <div class="col-md-4 ml-auto"><h3>Работает</h3><hr><p id="login"><?php echo $_SESSION["login"];?></p>
           <p>IP: <?php echo $_SERVER["REMOTE_ADDR"]; ?></p></div>
