@@ -7,23 +7,20 @@ $res = R::getAll('SELECT views, hosts, downloads FROM visits WHERE date=?', [$da
 
  foreach($res as $row)
   {
-$stats='<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <center><div class="employees">
-                    <p class="counter-count">'.$row['views'].'</p>
-                    <p class="employee-p">Просмотров</p>
-                </div></center>
+$stats='<div class="col-4">
+                <div>
+                    <p>Просмотров: '.$row['views'].'</p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <center><div class="employees">
-                    <p class="counter-count">'.$row['hosts'].'</p>
-                    <p class="employee-p">Уникальные</p>
-                </div></center>
+            <div class="col-4">
+                <div class="employees">
+                    <p>Уникальные: '.$row['hosts'].'</p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <center><div class="employees">
-                    <p class="counter-count">'.$row['downloads'].'</p>
-                    <p class="employee-p">Скачано</p>
-                </div></center>
+            <div class="col-4">
+                <div>
+                    <p>Скачано: '.$row['downloads'].'</p>
+                </div>
             </div>';
 }
 echo($stats);

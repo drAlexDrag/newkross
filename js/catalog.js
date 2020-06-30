@@ -40,11 +40,11 @@ function departmentCatalog(unitid, depid) {
 // //   timerId = setTimeout(tick, 3000);
 // // }, 3000);
 // }
-function countDownloads() {
-  // showLoader() ;
-  // document.getElementById("loader").style.display = "block";
-  //  myVar = setTimeout(showLoader, 3000);
- } 
+// function countDownloads() {
+//   // showLoader() ;
+//   // document.getElementById("loader").style.display = "block";
+//   //  myVar = setTimeout(showLoader, 3000);
+//  }
 function loadData(page){
   $.ajax({
     url:"/catalog/catalog_phone.php",
@@ -80,14 +80,13 @@ else{loadData(1);}
 
     function countDownloads() {
 myVar = setTimeout(showLoader, 10);
-    // $.ajax({
-    //   url: "countdownloads.php",
-    //   cache: false,
-    //   dataType:"html",
-    //   success: function(data){
-
-    //   }
-    // });
+    $.ajax({
+      url: "countdownloads.php",
+      cache: false,
+      dataType:"html",
+      success: function(data){
+      }
+    });
 
   }
   function showLoader() {
@@ -97,6 +96,7 @@ myVar = setTimeout(showLoader, 10);
 document.getElementById("loader").style.display = "none";
 // sessionStorage.setItem("catalogDownload", "false");
 document.cookie = "catalogDownload=false";
+console.log("Загрузка завершена");
   }
   else {
 
