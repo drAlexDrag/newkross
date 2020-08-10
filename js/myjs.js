@@ -7,6 +7,7 @@ $(document).ready(function(){
     sessionStorage.setItem("user", user);
   });
 var myWindow;
+//Резервное копирование базы данных
 function dump() {
   console.log("Start Dump");
  $.ajax({
@@ -194,18 +195,18 @@ function insertKrossData() {
   $("#myModalForm")[0].reset();
   $('#myModalCRUDTitle').html("Добавить данные на "+objArea.name);
 
-      $('#data').removeAttr('disabled');
-      $('#confirmInsert').removeAttr('hidden');
-      $('#confirmUpdate').attr('hidden', 'hidden');
-      $('#clearData').attr('hidden', 'hidden');
-      $('#perekross').attr('hidden', 'hidden');
-      $('.perekross').attr('hidden', 'hidden');
-$('#result_auto').remove();
-      $(".blockbtn").show(1000);
+  $('#data').removeAttr('disabled');
+  $('#confirmInsert').removeAttr('hidden');
+  $('#confirmUpdate').attr('hidden', 'hidden');
+  $('#clearData').attr('hidden', 'hidden');
+  $('#perekross').attr('hidden', 'hidden');
+  $('.perekross').attr('hidden', 'hidden');
+  $('#result_auto').remove();
+  $(".blockbtn").show(1000);
 
-      $('#myModalCRUD').modal('show');
-      element = document.querySelectorAll('input[data-table-id]');
-      for (i = 0; i < element.length; i++) {
+  $('#myModalCRUD').modal('show');
+  element = document.querySelectorAll('input[data-table-id]');
+  for (i = 0; i < element.length; i++) {
     element[i].setAttribute('data-table-id', '');
   }
 
