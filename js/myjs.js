@@ -18,6 +18,10 @@ function dump() {
   }
 });
 }
+function selectCable()
+{
+  window.open("/cable/indexCable.php");
+}
 function openWin() {
   myWindow = window.open("", "_blank", "MsgWindow", "resizable=yes,top=50,left=1,width=200,height=100");
   myWindow.document.write('<div class="container-fluid-xl images-tabl"><a href="#"><img src="../images/krjpg.jpg"></a></div>\

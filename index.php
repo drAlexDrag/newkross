@@ -52,6 +52,8 @@ if(isset($_SESSION['loginUser'])):?>
             <hr>
             <a class="dropdown-item" href="#" onclick="openWin()">Таблица кабелей</a>
             <hr>
+            <a class="dropdown-item" href="#" onclick="selectCable()">Test Cable</a>
+            <hr>
             <a class="dropdown-item" href="./log/log.php" target="_blank">Логи</a>
             <a class="dropdown-item" href="#" onclick="dump()">Резервное копирование БД</a>
           </div>
