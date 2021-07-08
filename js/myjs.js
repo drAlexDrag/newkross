@@ -5,6 +5,7 @@ $(document).ready(function(){
     fetchData(1);
     var user=$('#login').text();
     sessionStorage.setItem("user", user);
+    localStorage.setItem("user", user);
   });
 var myWindow;
 //Резервное копирование базы данных

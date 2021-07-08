@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 
  });
-var user=sessionStorage.getItem('user');
+var user=localStorage.getItem('user');
 // function winOpen(argument) {
 //   var myWindow = window.open("", "_blank", "MsgWindow", "resizable=yes,top=50,left=50,width=200,height=100");
 //   myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
@@ -244,6 +244,7 @@ function get_number(id, number) {
   }
   function editNumber(number) {
     // body...
+    console.log("Start edit number")
     var content='<h1 align="center">Таблица абонентов</h1>\
     <div class="table-responsive">\
     <div align="right">\
@@ -337,6 +338,7 @@ function get_number(id, number) {
 }
   function update_data(id, column_name, value, table_name)
   {
+    console.log(user)
     $.ajax({
       url:"update.php",
       method:"POST",

@@ -27,7 +27,7 @@
       <span class="animation-wrap"><span class="animation-dot"></span></span>
       </span>
       </div>
-      <table id="table" data-toggle="bootstrap-table" data-height="460" data-url="json/data1.json" class="table table-bordered table-hover" style="margin-top: -49px;">
+      <table id="table" data-toggle="bootstrap-table" data-height="460" data-url="json/data.json" class="table table-bordered table-hover" style="margin-top: -49px;">
   <thead>
       <tr>
             <th style="" data-field="id">

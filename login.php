@@ -43,7 +43,7 @@ if (isset($data['doLogin'])) {
 	</head>
 <body>
 <div class="container">
-  <h2 class="text-center">Авторизация пользователя</h2>
+  <h2 class="text-center">Авторизация</h2>
   <hr>
 	<form class="form-horizontal well" action="login.php" method="post">
 
@@ -68,6 +68,6 @@ if (isset($data['doLogin'])) {
 	<hr>
 	<div class="row"><img src="/images/telefon.gif" alt="альтернативный текст"></div>
  </div>
-
+<hr><p>24062021</p>
 </body>
 </html>

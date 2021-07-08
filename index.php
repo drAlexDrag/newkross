@@ -76,6 +76,7 @@ if(isset($_SESSION['loginUser'])):?>
             <a class="dropdown-item" href="#" onclick="usersConfig()">Настройка пользователей</a>
             <!-- <a class="dropdown-item" href="./sverka/sverka.php" target="_blank">Сверка со старой базой по номерам</a> -->
             <a class="dropdown-item" href="./cards/seecards.php" target="_blank">See Cards</a>
+            <a class="dropdown-item" href="./change/changenumberphone.php" target="_blank">Change number phone</a>
 
           </div>
         </li>
