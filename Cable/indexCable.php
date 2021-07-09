@@ -45,6 +45,10 @@ echo $output;
   <option value="4">Внутренние</option>
   <option value="7">Городские</option>
 </select>
+<select size="1" name="param_sort" id="param_sort" style="color: #000; font-size: 16px; font-weight: 900;" >
+  <option value="krossdata.number">Сортировка по номеру</option>
+  <option value="krossdata.data">Сортировка по данным</option>
+</select>
 <!-- <div class="form-check-inline">
   <label class="form-check-label">
     <input type="radio" class="form-check-input" name="param_phone" value="4">Внутренние

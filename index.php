@@ -52,7 +52,8 @@ if(isset($_SESSION['loginUser'])):?>
             <hr>
             <a class="dropdown-item" href="#" onclick="openWin()">Таблица кабелей</a>
             <hr>
-            <a class="dropdown-item" href="#" onclick="selectCable()">Test Cable</a>
+            <a class="dropdown-item" href="./change/changenumberphone.php" target="_blank">Изменить номер телефона</a>
+            <a class="dropdown-item" href="#" onclick="selectCable()">Просмотр по сотне</a>
             <hr>
             <a class="dropdown-item" href="./log/log.php" target="_blank">Логи</a>
             <a class="dropdown-item" href="#" onclick="dump()">Резервное копирование БД</a>
@@ -76,7 +77,7 @@ if(isset($_SESSION['loginUser'])):?>
             <a class="dropdown-item" href="#" onclick="usersConfig()">Настройка пользователей</a>
             <!-- <a class="dropdown-item" href="./sverka/sverka.php" target="_blank">Сверка со старой базой по номерам</a> -->
             <a class="dropdown-item" href="./cards/seecards.php" target="_blank">See Cards</a>
-            <a class="dropdown-item" href="./change/changenumberphone.php" target="_blank">Change number phone</a>
+            
 
           </div>
         </li>

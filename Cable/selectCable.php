@@ -8,6 +8,7 @@ if(isset($_SESSION['loginUser'])):?>
 	$selecsotnya=$_POST["selectsotnya"].'%';
 	$area=$_POST["area"];
 	$param_phone=$_POST["param_phone"];
+	$param_sort=$_POST["param_sort"];
 require_once "../phpdebug/phpdebug.php";//вывод в консоль
 $debug = new PHPDebug();
 // $output = '';
@@ -17,14 +18,14 @@ $debug->debug("PHPDebug is Started", null, LOG);
 	$select_sotnya=R::getAll("SELECT DISTINCT * FROM krossdata WHERE krossdata.area_id=?
 	AND length(krossdata.number)=? AND krossdata.number<>9999999 AND
 	krossdata.data LIKE ?
-	ORDER BY krossdata.number ASC", [$area, $param_phone, $selecsotnya]);
+	ORDER BY $param_sort ASC", [$area, $param_phone, $selecsotnya]);
 	// $select_sotnya=R::getAll("SELECT DISTINCT krossdata.number, krossdata.data FROM krossdata WHERE krossdata.area_id=1
 	// AND length(krossdata.number)=7 AND krossdata.number<>9999999
 	// ORDER BY krossdata.data ASC");
 // var_dump($mion_all_gorod_number);
 	foreach ($select_sotnya as $row){
 		// $out.='<p>'.$row["number"].'---'.$row["data"].'</p>';
-		$out.='<p>'.$row["number"].'</p>';
+		$out.='<p>'.$row["number"].' --- '.$row["data"].'</p>';
 		$i++;
 
 	}

@@ -21,8 +21,8 @@ for (var i in data.items) {
   list += '<li>' + i + ': ' + vata.items[i] + ' шт. </li>';
 }
 
-document.getElementById('test').innerHTML += header;
-document.getElementById('test').innerHTML += '<ul>' + list + '</ul>';
+// document.getElementById('test').innerHTML += header;
+// document.getElementById('test').innerHTML += '<ul>' + list + '</ul>';
 
   });
 function selectCable()
@@ -31,10 +31,11 @@ function selectCable()
   var selectsotnya=$("#sotnya").val();
   var area = $('#param_area').find(':selected').attr('data-id');
   var param_phone = $('#param_phone').find(':selected').attr('value');
+  var param_sort = $('#param_sort').find(':selected').attr('value');
   $.ajax({
     url:"selectCable.php",
     method:"POST",
-    data:{selectsotnya:selectsotnya, area:area, param_phone:param_phone},
+    data:{selectsotnya:selectsotnya, area:area, param_phone:param_phone, param_sort},
     dataType:"html",
     success:function(data)
     {
