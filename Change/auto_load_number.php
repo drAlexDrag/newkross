@@ -16,5 +16,10 @@ foreach($beans as $row)
   $output.="</tr>";
 }
 $output.="</tbody></table></div>";
+if ($beans==null){$output=''; $output='<br><div class="alert alert-info">
+<strong>Info!</strong> Номер в базе отсутствует.
+<hr>
+<button type="button" class="btn btn-primary" onclick="tablnumber()">Добавить новый номер в справочник</button>
+</div>';}
 echo $output;
 ?>

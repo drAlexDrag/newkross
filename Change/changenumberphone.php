@@ -19,8 +19,8 @@
 	<h1>Смена номеров телефонов</h1>
 	<div id="alert_message"></div> 
 	<p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Изменить один номер</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Загрузить список</button>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Изменить номер</a>
+  <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Загрузить список</button> -->
  <!--  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button> -->
 </p>
 <div class="row">
@@ -45,7 +45,7 @@
 		</div>
 		<hr>
 		<div class="row">
-			<button class="btn btn-primary" type="button" onclick="update_number()">Заменить</button>
+			<button class="btn btn-primary" type="button" id="one_number_change" onclick="update_number()">Заменить</button>
 		</div>
 		</div>
       </div>

@@ -18,13 +18,16 @@ function update_number() {
       data:{old_number:old_number, new_number:new_number, user:user},
       success:function(data)
       {
-         $("#alert_message").show();
- $('#alert_message').html('<div class="container-fluid alert alert-success">\
-   <button class="btn btn-primary" type="button" id="hide" onclick="hide_alert()">Скрыть</button>\
-   '+data+'</div>');
+         $('#infoPhone').html(data)
+ //         $("#alert_message").show();
+ // $('#alert_message').html('<div class="container-fluid alert alert-success">\
+ //   <button class="btn btn-primary" type="button" id="hide" onclick="hide_alert()">Скрыть</button>\
+ //   '+data+'</div>');
  // setInterval(function(){
  //       $('#alert_message').html('');
  //     }, 10000);
+ $('#old_number').val('')
+ $('#new_number').val('')
       }
     })   
 }
@@ -51,27 +54,14 @@ $(document).on('keyup', '.autoListNumber', function(){//роверка инфо�
 
   var idinput=event.target.id
   console.log (idinput)
-  // input=event.target.id;
-  // var tablename = event.target.dataset.table;
-  // // console.log("onkeyup: Таблица---", tablename+'\n'+
-  // //   "Инпут---", idinput+'\n'+
-  // //   "Значение---", $(this).val()+'\n'+
-  // //   "Id Значения---", $(this).attr("data-table-id"));
+
   var phonenumber = $(this).val()
   console.log (phonenumber.length+"---"+phonenumber)
   if (phonenumber.length==7){
+
     autoloadNumberInfo(phonenumber)
-  }
-  // var iddatatable = $(this).attr("data-table-id");
-  // var columnname=tablename+"_name";
-  // if (idinput=="number"){columnname=tablename+"_number";}
-  // // console.log("onkeyup: Имя столбца", columnname);
-  // idinput='#'+idinput;
-  // $(idinput).attr({"data-table-id":""});
-  // $('#result').remove();
-  // $(idinput).addClass('alert alert-danger');
-  // btnblock();
-  // autoListData(tablename, idinput, query, columnname, iddatatable, input);
+  }else {$('#infoPhone').html('')}
+
 })
 function autoloadNumberInfo(phonenumber) {
   // body...
@@ -85,4 +75,12 @@ function autoloadNumberInfo(phonenumber) {
 
       }
     }) 
+}
+
+
+function tablnumber(number) {
+  // body...
+  // var number = $('#number').val();
+  // window.open('./table/table.php?number='+number);
+  window.open('../table/table.php');
 }
